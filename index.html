@@ -1,9 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
     <title>LogicBeach</title>
     <link rel="stylesheet" href="style.css">
+
 </head>
 
-<body class="center bg2 max">
+<body class="center bg2 max stars">
     <div id="main">
 
         <div class="logo">
@@ -13,14 +18,35 @@
         <div id="home">
             <h4><a onclick="showSection('home')">Home</a> <span class="line">|</span>
                 <a onclick="showSection('projects')">Projects</a> <span class="line">|</span>
+                <a onclick="showSection('art')">Art</a> <span class="line">|</span>
                 <a onclick="showSection('logicbots')">LogicBots</a>
             </h4>
         </div>
 
+        <div id="section-home" class="sections" style="display: block;">
+            <img src="logo2.png" style="max-width: 500px;">
+            <div id='morehome' class="sections">
+                <p>‘LogicBeach’ is the name for the Music, Art, and Projects created by [redacted] whose interests
+                    span Blockchain tech, AI, and Astronomy to Music Videos, Watercolor, and the Natural World.
+                    They have released several albums, art pieces, and NFTs.</p>
+            </div>
+        </div>
+        <div id="section-projects" class="sections" style="display: none;">
+            <p>projects
+
+            </p>
+        </div>
+        <div id="section-logicbots" class="sections" style="display: none;">
+            <p>logicbots</p>
+        </div>
+        <div id="section-art" class="sections" style="display: none;">
+            <p>logicbots</p>
+        </div>
         <h2></h2>
 
     </div>
     <footer id="footer">
         <span><img src="footerLB.gif"></span>
     </footer>
+    <script src="script.js"></script>
 </body>

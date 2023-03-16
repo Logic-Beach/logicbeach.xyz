@@ -6,14 +6,28 @@ body {
 	margin: 0 auto;
 	max-width: 860px;
 	height: 100%;
+	background: #000;
+
 }
+
+.main {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 50%;
+	height: 100vh;
+	/* Example height */
+	background-color: lightgray;
+	/* Just for visualization */
+}
+
+
 
 .center {
 	text-align: center;
 }
 
 .intro {
-	font-size: 4em;
 	image-rendering: auto;
 	align-items: center;
 }
@@ -33,7 +47,7 @@ body {
 }
 
 a {
-	color: #000000;
+	color: #ffffff;
 }
 
 .gallery {
@@ -59,6 +73,12 @@ a {
 	border-radius: 0 0 8px 8px;
 }
 
+.sections {
+	color: white;
+	size: 50px;
+
+}
+
 .logo {
 	/*outline: auto;*/
 	display: flex;
@@ -81,15 +101,11 @@ h2,
 h3,
 p,
 a {
-	color: grey;
+	color: white
 }
 
 span.line {
 	color: rgb(126, 126, 126);
-}
-
-.cursor {
-	cursor: url(https://i.imgur.com/RUE567I.gif), auto;
 }
 
 /* @group Blink */
