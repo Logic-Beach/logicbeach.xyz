@@ -7,88 +7,81 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<script src="http://d3js.org/d3.v3.min.js"></script>
-<script src='https://unpkg.com/trianglify@^4/dist/trianglify.bundle.js'></script>
-
 <body class="center">
-    <div id="polygon-bg-wrapper">
-        <div id="polygon-bg">
-            <div id="main">
-                <div class="logo">
-                    <img class="intro" src="images/logo.png" style="width: 500px;">
+    <div class="center" id="main">
+        <div class="logo">
+            <img class="intro" src="images/logo.png" style="width: 500px;">
+        </div>
+
+        <div id="home">
+            <h4><button onclick="showSection('home')" class="button"> Home </button>
+                <button onclick="showSection('projects')" class="button"> Projects </button>
+                <button onclick="showSection('art')" class="button"> Art </button>
+                <button onclick="showSection('logicbots')" class="button"> LogicBots </button>
+            </h4>
+        </div>
+
+        <div id="section-home" style="display: block;">
+            <img src="images/logo2.png" style="max-width: 300px;">
+            <br><br>
+            <div id='morehome' class="sections">
+                <div style="align-self: center;">
+                    ‘LogicBeach’ is the name for the music, art, and projects<br>
+                    created by [redacted] whose interests span blockchain tech,<br>
+                    AI, and astronomy to film, music, and the natural world.<br>
                 </div>
+            </div>
+        </div>
 
-                <div id="home">
-                    <h4><button onclick="showSection('home')" class="button"> Home </button>
-                        <button onclick="showSection('projects')" class="button"> Projects </button>
-                        <button onclick="showSection('art')" class="button"> Art </button>
-                        <button onclick="showSection('logicbots')" class="button"> LogicBots </button>
-                    </h4>
-                </div>
-
-                <div id="section-home" class="sections" style="display: flex;">
-                    <img src="images/logo2.png" style="max-width: 300px;">
-                    <br><br>
-                    <div id='morehome' class="sections">
-                        <div style="align-self: center;">
-                            ‘LogicBeach’ is the name for the music, art, and projects<br>
-                            created by [redacted] whose interests span blockchain tech,<br>
-                            AI, and astronomy to film, music, and the natural world.<br>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="section-projects" class="sections"
-                    style="display: none; max-width: 100%; border:2px #fff solid;justify-content:center;text-shadow: 3px 3px 5px #000;">
-
-                    <div class="imageContainer" style="padding:10px">
-                        <a href="https://logic-beach.github.io/EthAddrMelody.github.io/">
-                            <img src="images/EthAddrMelody.png" alt="Robot playing synth" style="width:100%;">
-                        </a>
-                        <div class="top-left" style="color:#fff;">
-                            EthAddressMelody - A fun experiment that creates a determistic melody out
-                            of a connected Eth address.
-                        </div>
-                    </div>
-
-                    <div class="imageContainer" style="padding:10px">
-                        <a href="https://app.poap.art/">
-                            <img src="images/poapart.png" alt="Robot playing synth" style="width:100%;">
-                        </a>
-                        <div class="top-left">
-                            POAP.art Canvas Coordinator - An effort to drive coordinated art efforts.
-                        </div>
-                    </div>
-                    <br><br>
-                    More to be added soon...
+        <div id="section-projects" class="sections"
+            style="display: none; max-width: 50%; border:2px #fff solid;text-shadow: 3px 3px 5px #000;">
+            <div class="imageContainer" style="padding:10px">
+                <a href="https://logic-beach.github.io/EthAddrMelody.github.io/">
+                    <img src="images/EthAddrMelody.png" alt="Robot playing synth" style="width:100%;">
+                </a>
+                <div class="top-left" style="color:#fff;">
+                    EthAddressMelody - A fun experiment that creates a determistic melody out
+                    of a connected Eth address.
                 </div>
             </div>
 
-            <div id="section-art" class="sections" style="display: none;">
-                <div class="music">
-                    <h1>Music</h1>
-                    <iframe style="border-radius:12px"
-                        src="https://open.spotify.com/embed/artist/5S5ULv5YgrAssHS3o4QUIx?utm_source=generator&theme=0"
-                        width="50%" height="500px" frameBorder="0" allowfullscreen=""
-                        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                        loading="lazy"></iframe>
-                    <h1>Music Videos</h1>
-                    <div id="videoList"></div>
-                    <a href="https://www.youtube.com/@LogicBeach/videos">More...</a><br><br>
+            <div class="imageContainer" style="padding:10px">
+                <a href="https://app.poap.art/">
+                    <img src="images/poapart.png" alt="Robot playing synth" style="width:100%;">
+                </a>
+                <div class="top-left">
+                    POAP.art Canvas Coordinator - An effort to drive coordinated art efforts.
                 </div>
             </div>
+            <br><br>
+            More to be added soon...
+        </div>
 
-            <div id="section-logicbots" style="display: none;">
-                <p>LogicBots are a brute force NFT mint of 1000 robots. <br>One is drawn and minted each day
-                    followed by
-                    a 7
-                    day auction <a
-                        href="https://opensea.io/collection/logic-bots?search[sortAscending]=false&search[sortBy]=CREATED_DATE">via
-                        OpenSea</a></p>
-                <div id="users-NFT" class="'grid">
-                    <button id="connect">Connect MetaMask</button>
 
-                </div>
+        <div id="section-art" class="sections" style="display: none;">
+            <div class="music">
+                <h1>Music</h1>
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/artist/5S5ULv5YgrAssHS3o4QUIx?utm_source=generator&theme=0"
+                    width="50%" height="500px" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+                    loading="lazy"></iframe>
+                <h1>Music Videos</h1>
+                <div id="videoList"></div>
+                <a href="https://www.youtube.com/@LogicBeach/videos">More...</a><br><br>
+            </div>
+        </div>
+
+        <div id="section-logicbots" style="display: none;">
+            <p>LogicBots are a brute force NFT mint of 1000 robots. <br>One is drawn and minted each day
+                followed by
+                a 7
+                day auction <a
+                    href="https://opensea.io/collection/logic-bots?search[sortAscending]=false&search[sortBy]=CREATED_DATE">via
+                    OpenSea</a></p>
+            <div id="users-NFT" class="'grid">
+                <button id="connect">Connect MetaMask</button>
+
             </div>
         </div>
     </div>
