@@ -4,11 +4,12 @@ html,
 body {
     font-family: "courier", sans-serif;
     line-height: 1.4;
-    margin: 0 auto;
+    margin: 0;
+    padding: 0;
     height: 100%;
-    background: #000;
+    background: #111;
     perspective: 100px;
-    overflow: hidden;
+    overflow: visible;
 
 }
 
@@ -21,18 +22,22 @@ body {
     height: 100vh;
     /* Example height */
     background-color: lightgray;
+    //border: white 2px solid;
     /* Just for visualization */
 }
 
-
+.music {
+    //align-items: center;
+    width: auto;
+}
 
 .center {
-    text-align: center;
+    // text-align: center;
 }
 
 .intro {
     image-rendering: auto;
-    align-items: center;
+    // align-items: center;
 }
 
 .max {
@@ -41,8 +46,24 @@ body {
     word-wrap: break-word;
 }
 
-a {
-    color: #ffffff;
+.button {
+    mix-blend-mode: difference;
+
+    /* Green */
+    border: none;
+    color: black;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.button:hover {
+    background-color: #004488;
 }
 
 .gallery {
@@ -80,8 +101,8 @@ a {
     justify-content: center;
     align-items: center;
     /* set the height of the container if needed */
-    height: 200px;
-    border: 50px
+    height: 150px;
+
 }
 
 .container {
@@ -91,99 +112,74 @@ a {
     box-sizing: border-box;
 }
 
+.imageContainer {
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.top-left {
+    position: absolute;
+    top: 8px;
+    left: 16px;
+}
+
 h1,
 h2,
 h3,
 p,
 a {
-    color: white
+    color: white;
+    cursor: pointer;
 }
 
-span.line {
-    color: rgb(126, 126, 126);
+table,
+th,
+td {
+    border: 1px solid fff;
+}
+
+/*Display a users LogicBots*/
+/////////////////////////////////////////////
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 10px;
+    padding: 10px;
+}
+
+.grid-item {
+    //overflow: hidden;
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    transition: transform 0.3s ease;
+}
+
+.grid-item:hover img {
+    transform: scale(1.1);
+}
+
+/*Video Container*/
+/////////////////////////////////////////////////////
+
+.video-container {
+    flex: content;
+    //align-items: center;
+}
+
+.video-wrapper {
+    display: none;
+    //border: #ffffff 2px solid;
+    height: 300px;
+}
+
+.video-thumbnail {
+    max-width: 200px;
 }
 
 
-
-
-
-
-
-
-
-
-/*StarField*/
-
-$stars: 1000; // Number of start per layer
-$depth: 100; // Depth between star layers
-$speed: 5s; // Number of seconds to transition between layers
-$width: 3000; // Width of the starfield
-$height: 960; // Height of the starfiel
-
-.stars {
-    z-index: -1;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 2px;
-    height: 2px;
-    $box-shadow: ();
-
-    @for $i from 0 through $stars {
-        $box-shadow: $box-shadow,
-        (random($width)-$width/2 + px) (random($height)-$height/2 + px) hsl(90, 0, 75+random(25));
-    }
-
-    box-shadow: $box-shadow;
-    animation: fly $speed linear infinite;
-    transform-style: preserve-3d;
-
-    &:before,
-    &:after {
-        content: "";
-        position: fixed;
-        width: 100%;
-        height: 100%;
-        box-shadow: inherit;
-    }
-
-    &:before {
-        transform: translateZ(-$depth + px);
-        animation: fade1 $speed linear infinite;
-    }
-
-    &:after {
-        transform: translateZ(-$depth * 2 + px);
-        animation: fade2 $speed linear infinite;
-    }
-}
-
-@keyframes fly {
-    from {
-        transform: translateZ(0px);
-    }
-
-    to {
-        transform: translateZ($depth + px);
-    }
-}
-
-@keyframes fade1 {
-    from {
-        opacity: 0.5;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-@keyframes fade2 {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 0.5;
-    }
-}
+//Background
