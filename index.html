@@ -7,91 +7,75 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body class="center">
+<body class="center, gradient-rotation">
     <div class="center" id="main">
         <div class="logo">
-            <img class="intro" src="images/logo.png" style="width: 500px;">
+            <img class="intro" src="images/logo.png" style="width: 100%">
         </div>
 
-        <div id="home">
-            <h4><button onclick="showSection('home')" class="button"> Home </button>
-                <button onclick="showSection('projects')" class="button"> Projects </button>
-                <button onclick="showSection('art')" class="button"> Art </button>
-                <button onclick="showSection('logicbots')" class="button"> LogicBots </button>
+        <div id="home" style="width: 100%">
+            <h4>
+                <button onclick="showSection('home')" class="button"> music </button>
+                <button onclick="showSection('art')" class="button"> art </button>
             </h4>
         </div>
 
         <div id="section-home" style="display: block;">
-            <img src="images/logo2.png" style="max-width: 300px;">
-            <div id="linkTree">
-                <a href="">Spotify</a>
-                <a href="">Apple Music</a>
-                <a href="">YouTube Music</a>
-            </div>
-            <br><br>
+            <h1>music</h1>
             <div id='morehome' class="sections">
                 <div style="align-self: center;">
-                    ‘LogicBeach’ is the name for the music, art, and projects<br>
-                    created by [redacted] whose interests span blockchain tech,<br>
-                    AI, and astronomy to film, music, and the natural world.<br>
+                    
+                   Logicbeach writes, records, and produces glitched-minimal-downtempo-electronic music which contains sounds and beats 
+                    created from odd inspirations and musings on the nature of reality. Likes: magnetic tape, oscilloscopes, hot silicon chips. Dislikes: knees
+                    
                 </div>
             </div>
-        </div>
-
-        <div id="section-projects" class="sections"
-            style="display: none; max-width: 50%; border:2px #fff solid;text-shadow: 3px 3px 5px #000;">
-            <div class="imageContainer" style="padding:10px">
-                <a href="https://logic-beach.github.io/EthAddrMelody.github.io/">
-                    <img src="images/EthAddrMelody.png" alt="Robot playing synth" style="width:100%;">
+            <div id="linkTree" style="font-size: 0;">
+                <a href="https://open.spotify.com/artist/5S5ULv5YgrAssHS3o4QUIx" target="_blank">
+                    <img src="images/spotify.png" style="margin:10px" alt="Spotify">
                 </a>
-                <div class="top-left" style="color:#fff;">
-                    EthAddressMelody - A fun experiment that creates a determistic melody out
-                    of a connected Eth address.
-                </div>
+                <a href="https://music.apple.com/us/artist/logicbeach/1533590208" target="_blank">
+                    <img src="images/apple.png" style="margin:10px" alt="Apple Music">
+                </a>
+                <a href="https://music.youtube.com/channel/UCylfszhMff0HITbgTS3j3Bg" target="_blank">
+                    <img src="images/ytmusic.png" style="margin:10px" alt="ytmusic">
+                </a>
+                <br><br>
             </div>
 
-            <div class="imageContainer" style="padding:10px">
-                <a href="https://app.poap.art/">
-                    <img src="images/poapart.png" alt="Robot playing synth" style="width:100%;">
-                </a>
-                <div class="top-left">
-                    POAP.art Canvas Coordinator - An effort to drive coordinated art efforts.
-                </div>
-            </div>
+            <iframe style="border-radius:0px"
+            src="https://open.spotify.com/embed/artist/5S5ULv5YgrAssHS3o4QUIx?utm_source=generator&theme=0"
+            width="90%" height="500px"  allowfullscreen=""
+            allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+            loading="lazy"></iframe>
+
             <br><br>
-            More to be added soon...
+
         </div>
 
 
         <div id="section-art" class="sections" style="display: none;">
             <div class="music">
-                <h1>Music</h1>
-                <iframe style="border-radius:12px"
-                    src="https://open.spotify.com/embed/artist/5S5ULv5YgrAssHS3o4QUIx?utm_source=generator&theme=0"
-                    width="50%" height="500px" frameBorder="0" allowfullscreen=""
-                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-                    loading="lazy"></iframe>
-                <h1>Music Videos</h1>
+                <h1>art</h1>
+                <h2>logic_bots</h2>
+                <img src="https://i.seadn.io/gcs/files/79534a6c7227006ca062ff5cdedf9b27.png?auto=format&dpr=1&w=3840" style="max-width: 100%;"> 
+                <p>Logic_Bots were a brute force NFT mint of 365 robots. I drew one a day for a year and sold them all <a
+                        href="https://opensea.io/collection/logic-bots?search[sortAscending]=false&search[sortBy]=CREATED_DATE" target="_blank">via
+                        OpenSea</a>
+                    You are probably seeing this because you found one of the physical copies being used as a flyer to share LBs music ;]</p>
+               <br>
+                <h2>music videos</h2>
                 <div id="videoList"></div>
-                <a href="https://www.youtube.com/@LogicBeach/videos">More...</a><br><br>
-            </div>
-        </div>
+                <a href="https://www.youtube.com/@LogicBeach/videos" target="_blank">More...</a><br><br>
 
-        <div id="section-logicbots" style="display: none;">
-            <p>LogicBots are a brute force NFT mint of 1000 robots. <br>One is drawn and minted each day
-                followed by
-                a 7
-                day auction <a
-                    href="https://opensea.io/collection/logic-bots?search[sortAscending]=false&search[sortBy]=CREATED_DATE">via
-                    OpenSea</a></p>
-            <div id="users-NFT" class="'grid">
-                <button id="connect">Connect MetaMask</button>
-
+                <h2>other</h2>
+                <p>I draw and paint on everything. I love under the bridge and large concrete walls.</p>
             </div>
         </div>
     </div>
     <footer id="footer">
-        <span><img src="images/footerLB.gif"></span>
+        <br><br>
+        <span><img src="images/footerLB.gif" style="justify-content: center;"></span>
     </footer>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/web3@1.6.1/dist/web3.min.js"></script>

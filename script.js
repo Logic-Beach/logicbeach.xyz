@@ -44,7 +44,7 @@ function createVideoElement(videoId, thumbnailSrc) {
 
     videoContainer.addEventListener('click', () => {
         const videoEmbedCode = `
-        <iframe width="50%" height="100%" src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
       `;
         videoWrapper.innerHTML = videoEmbedCode;
         videoWrapper.style.display = 'block';
@@ -53,25 +53,4 @@ function createVideoElement(videoId, thumbnailSrc) {
 
     return videoContainer;
 }
-
-/*WEB3 STUFF*/
-const web3 = new Web3(Web3.givenProvider);
-const grid = document.getElementById('grid');
-const connectButton = document.getElementById('connect');
-
-async function connectMetaMask() {
-    try {
-        const accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-        const userAddress = accounts[0];
-    } catch (error) {
-        console.error('Error connecting to MetaMask:', error);
-    }
-}
-
-connectButton.addEventListener('click', connectMetaMask);
-
-//Background
-var bg = new Trianglify();
-var pattern = bg.generate(document.body.clientWidth, document.body.clientHeight);
-document.body.setAttribute('style', 'background-image: ' + pattern.dataUrl);
 
