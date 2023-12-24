@@ -179,6 +179,34 @@
  .video-thumbnail {
    max-width: 200px;
  }
+ 
+ #linkTree {
+  display: flex;
+  justify-content: space-between; /* Distribute items evenly */
+  align-items: center; /* Center vertically */
+  font-size: 0; /* Remove extra spacing between inline-block elements */
+  max-width: 100%; /* Set the maximum width to the width of the viewport */
+}
 
+#linkTree a {
+  margin: 10px;
+}
+
+#linkTree img {
+  width: 100px; /* Ensure images don't exceed the width of the container */
+  height: auto; /* Maintain aspect ratio and prevent distortion */
+}
+@media screen and (max-width: 768px) {
+  #linkTree a img {
+      width: 50px; /* Adjust the width for mobile screens */
+  }
+}
+
+/* Additional media query for screens with a minimum width of 1024px (typical for desktops) */
+@media screen and (min-width: 769px) {
+  #linkTree a img {
+      width: 60px; /* Adjust the width for desktop screens */
+  }
+}
 
  /*Background*/
