@@ -193,20 +193,8 @@
 }
 
 #linkTree img {
-  width: 100px; /* Ensure images don't exceed the width of the container */
+  max-width: 90%; /* Ensure images don't exceed the width of the container */
   height: auto; /* Maintain aspect ratio and prevent distortion */
-}
-@media screen and (max-width: 768px) {
-  #linkTree a img {
-      width: 50px; /* Adjust the width for mobile screens */
-  }
-}
-
-/* Additional media query for screens with a minimum width of 1024px (typical for desktops) */
-@media screen and (min-width: 769px) {
-  #linkTree a img {
-      width: 60px; /* Adjust the width for desktop screens */
-  }
 }
 
  /*Background*/
