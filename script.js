@@ -46,7 +46,7 @@ function createVideoElement(videoId, thumbnailSrc) {
 
     videoContainer.addEventListener('click', () => {
         const videoEmbedCode = `
-        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
+        <iframe width="50%" height="100%" src="https://www.youtube.com/embed/${videoId}?autoplay=1" frameborder="0" allow="autoplay;" allowfullscreen></iframe>
       `;
         videoWrapper.innerHTML = videoEmbedCode;
         videoWrapper.style.display = 'block';
