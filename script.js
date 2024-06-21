@@ -16,6 +16,8 @@ function showSection(sectionId) {
 /* Art */////////////////////////////////////////////////////////
 //videoList
 const videoData = [
+    { videoId: 'kEaACeclAlM', thumbnailSrc: 'images/gravitation.png' },
+    { videoId: 'hhGosm2qv0E', thumbnailSrc: 'images/degraded.png' },
     { videoId: '9SaEnpY5NwU', thumbnailSrc: 'images/sl.webp' },
     { videoId: 'gvEY9e1Qt6c', thumbnailSrc: 'images/bits.webp' },
     { videoId: 'iM9WWEoYNf0', thumbnailSrc: 'images/lb.eth.webp' },
